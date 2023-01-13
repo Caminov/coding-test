@@ -10,7 +10,7 @@ Estimated completion time: 1~2 hours
 
 This test is about handling data coming from fashion brands. It comprises products' specifications. The test is divided into two parts:
 
-- [ ] For the first part, you'll have to retrive data from a PostgreSQL database and display it in a table. You'll also have to implement a search feature, and an edit button as the last column of the table.
+- [ ] For the first part, you'll have to retrieve data from a PostgreSQL database and display it in a table. You'll also have to implement a search feature and an edit button as the last column of the table.
 - [ ] For the second part, you'll have to implement a form to add new data to the database.
 
 ### Table description
@@ -41,7 +41,7 @@ The table is composed of the following columns:
 
 ### Prerequisites
 
-In order to set everything up, you'll need to create an `.env.local` file at the root of the project. This file will contain the following variables:
+In order to set everything up, you'll need to create an `.env.local` file at the project's root. This file will contain the following variables:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=
@@ -75,7 +75,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-To learn more about this hiering test, take a look at the following resources:
+To learn more about this hiring test, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
