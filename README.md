@@ -53,6 +53,8 @@ As you read this, we already sent you the values for the first two variables. Th
 
 Finally, you'll also have to update your first name in the file `assets/db_types.ts`
 
+> Note: first name is always in lowercase
+
 ### First run
 
 First, run the development server:
