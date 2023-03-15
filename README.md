@@ -8,6 +8,18 @@ If you fork this repo, please keep yours private.
 
 Estimated completion time: 1~2 hours
 
+**Before starting, you'll have to setup your environment. You'll need to update several files:**
+
+- [ ] `.env.local`: you'll have to add the values for the `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` variables. We'll send you those values by email. You'll also have to add your first name in the `FIRST_NAME` variable.
+- [ ] `assets/db_types.ts`: you'll have to update the `yourname` table with your first name.
+- [ ] `pages/api/products/add.ts` and `get.ts`: you'll have to update the `yourname` table (actually matching the `db_types.ts` file) with your first name.
+
+To ensure that your setup is correct, you can run the following command after `yarn dev`:
+
+```bash
+curl --request GET --url http://localhost:3000/api/products/get
+```
+
 This test is about handling data coming from fashion brands. It comprises products' specifications. The test is divided into two parts:
 
 - [ ] For the first part, you'll have to retrieve data from a PostgreSQL database and display it in a table. You'll also have to implement a search feature and an edit button as the last column of the table.

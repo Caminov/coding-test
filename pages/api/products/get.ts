@@ -21,7 +21,16 @@ export default async function getProducts(
   }
 
   // Creating a supabase client using the environment variables
-  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  const firstName = process.env.FIRST_NAME
+
+  if (!supabaseUrl || !supabaseAnonKey || !firstName) {
+    res.status(500).json({ message: "Oops, your environment variables are not set correctly", products: [] })
+    return
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseAnonKey)
   
   // Getting the table name from the environment variables. This is simply your first name
   const table = process.env.FIRST_NAME!
